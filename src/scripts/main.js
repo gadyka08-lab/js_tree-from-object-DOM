@@ -21,31 +21,29 @@ const food = {
 const tree = document.querySelector('#tree');
 
 function createTree(element, data) {
-  // чи об'єкт не порожній.перевірка.
-  // Якщо ключів немає не потрібно створювати список.
+  // перевіряємо, чи є ключі в об'єкті
   if (Object.keys(data).length === 0) {
     return;
   }
 
-  // робимо основний елемент списку <ul>
+  // створюємо список <ul>
   const ul = document.createElement('ul');
 
-  // ітеруємося
   for (const key in data) {
-    // робимоелемент пункту списку <li>
+    // сттворюємо пункт <li> і додаємо текст
     const li = document.createElement('li');
-    li.textContent = key; // пишемоназву ключа в текст елемента
+    li.textContent = key;
 
-    //  РЕКУРСІЯ: викликаємо цю ж функцію для внутрішнього об'єкта.
-    // Передаємо поточний <li> як новий контейнер і вкладений об'єкт data[key].
+    // викликаємо функцію для вкладених даних через рекурсію
+    // Тепер передаємо li як новий "фундамент"
     createTree(li, data[key]);
 
-    // Додаємо готовий <li> до нашого <ul>
+    // Додаємо li до нашого ul
     ul.append(li);
   }
 
-  // додаємо весь побудований список у початковий контейнер
-  container.append(ul);
+  // додаємо наш ul до переданого element
+  element.append(ul);
 }
 
 createTree(tree, food);
