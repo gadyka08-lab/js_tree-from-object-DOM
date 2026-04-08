@@ -9,7 +9,6 @@ Use keys as list items.
 > Hint: use [Recursion](https://javascript.info/recursion)
 
 ![screenshot of the tree](example/object-tree.png)
-
 1. Replace `<your_account>` with your GitHub username in the link
     - [DEMO LINK](https://gadyka08-lab.github.io/js_tree-from-object-DOM/)
 2. Follow [this instructions](https://github.com/mate-academy/js_task-DOM-guideline)
