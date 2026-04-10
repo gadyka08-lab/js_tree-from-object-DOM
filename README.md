@@ -7,6 +7,7 @@ Use keys as list items.
 `data` - is a nested object
 
 > Hint: use [Recursion](https://javascript.info/recursion)
+
 ![screenshot of the tree](example/object-tree.png)
 1. Replace `<your_account>` with your GitHub username in the link
     - [DEMO LINK](https://gadyka08-lab.github.io/js_tree-from-object-DOM/)
